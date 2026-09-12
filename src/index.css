@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-ivory: #FAF7F2;
+    --paper-surface: #FCFAF7;
+    --stone-rim: rgba(214, 204, 190, 0.55);
+    --botanical-accent: #4A5D4E;
+    --gold-foil: #C8AD6D;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #FAF7F2;
+    color: #2D2A26;
+    background-image: radial-gradient(rgba(175, 160, 140, 0.12) 1px, transparent 0);
+    background-size: 28px 28px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, .font-serif, .font-display {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Handmade Paper Card Surface */
+.paper-card {
+  background-color: #FCFAF7;
+  border: 1px solid rgba(222, 214, 202, 0.7);
+  box-shadow: 0 2px 12px -2px rgba(60, 52, 42, 0.04), 0 1px 3px rgba(60, 52, 42, 0.02);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.paper-card:hover {
+  box-shadow: 0 6px 20px -3px rgba(60, 52, 42, 0.07), 0 2px 6px -1px rgba(60, 52, 42, 0.03);
+  border-color: rgba(198, 186, 170, 0.9);
+}
+
+/* Subtle Debossed Inset */
+.paper-inset {
+  background-color: #F5F0E8;
+  border: 1px solid rgba(220, 212, 200, 0.6);
+  box-shadow: inset 0 1px 3px rgba(50, 42, 32, 0.04);
+}
+
+/* Architectural Staircase Step */
+.staircase-step {
+  position: relative;
+  background: linear-gradient(135deg, #FCFAF7 0%, #F8F4ED 100%);
+  border: 1px solid rgba(218, 209, 195, 0.75);
+  box-shadow: 0 4px 16px -2px rgba(45, 39, 32, 0.05), 0 1px 3px rgba(45, 39, 32, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.staircase-step:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -4px rgba(45, 39, 32, 0.09), 0 2px 6px rgba(45, 39, 32, 0.04);
+  border-color: #4A5D4E;
+}
+
+/* Gentle Timer Breathing Pulse */
+@keyframes timerPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(74, 93, 78, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(74, 93, 78, 0.03);
+  }
+}
+
+.timer-active-pulse {
+  animation: timerPulse 2.4s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+/* Custom quiet luxury scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D8CEBF;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B8ABA0;
+}

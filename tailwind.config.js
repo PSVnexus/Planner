@@ -1,0 +1,100 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        ivory: {
+          50: '#FDFCFB',
+          100: '#FAF7F2',
+          200: '#F5F0E8',
+          300: '#EFE8DE',
+          400: '#E6DDCF',
+          500: '#D8CEBF',
+        },
+        stone: {
+          50: '#FAF8F5',
+          100: '#F3EFE9',
+          200: '#E6DFD5',
+          300: '#D5CABE',
+          400: '#B8ABA0',
+          500: '#8C8275',
+          600: '#6E6659',
+          700: '#524C42',
+          800: '#3D3830',
+          900: '#2A2722',
+        },
+        botanical: {
+          50: '#F3F6F4',
+          100: '#E4EBE5',
+          200: '#CCD8CD',
+          300: '#A3B9A5',
+          400: '#759478',
+          500: '#4A5D4E',
+          600: '#3D4F41',
+          700: '#303E33',
+          800: '#232E25',
+          900: '#171E19',
+        },
+        dusty: {
+          50: '#F3F6F9',
+          100: '#E5ECF2',
+          200: '#CCD9E5',
+          300: '#A6BED3',
+          400: '#7C9DBE',
+          500: '#5C6F84',
+          600: '#4A5B6E',
+          700: '#384655',
+          800: '#29333E',
+          900: '#1A2128',
+        },
+        taupe: {
+          50: '#F7F5F3',
+          100: '#EDE9E5',
+          200: '#DDD6CF',
+          300: '#C2B7AC',
+          400: '#9E9285',
+          500: '#7D7265',
+          600: '#635A4F',
+          700: '#4B443B',
+          800: '#36312A',
+          900: '#24201C',
+        },
+        warmgold: {
+          50: '#FCF9F2',
+          100: '#F7F1E0',
+          200: '#EFE1C0',
+          300: '#DECA97',
+          400: '#C8AD6D',
+          500: '#B0934A',
+          600: '#927738',
+          700: '#725B2A',
+        },
+        ink: {
+          DEFAULT: '#272421',
+          light: '#48433E',
+          muted: '#736B63',
+          faint: '#A69E96',
+        }
+      },
+      fontFamily: {
+        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        sans: ['"Plus Jakarta Sans"', '"Outfit"', 'system-ui', 'sans-serif'],
+        display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+      },
+      boxShadow: {
+        'subtle': '0 1px 3px rgba(45, 39, 32, 0.04), 0 4px 12px rgba(45, 39, 32, 0.03)',
+        'elevated': '0 4px 20px -2px rgba(45, 39, 32, 0.06), 0 2px 6px -1px rgba(45, 39, 32, 0.04)',
+        'float': '0 12px 32px -4px rgba(45, 39, 32, 0.08), 0 4px 12px -2px rgba(45, 39, 32, 0.05)',
+        'inner-soft': 'inset 0 1px 2px rgba(0, 0, 0, 0.04)',
+      },
+      backgroundImage: {
+        'paper-grain': 'radial-gradient(#d6cca9 0.5px, transparent 0.5px)',
+      }
+    },
+  },
+  plugins: [],
+}
